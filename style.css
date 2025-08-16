@@ -1,0 +1,60 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 80px; /* Add padding to prevent content from being hidden behind the fixed header */
+}
+
+/* Header/Navigation Bar */
+.heading {
+    background-color: #007bff; /* Blue color */
+    width: 100%;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.heading-logo {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.heading-logo img {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.heading-name {
+    color: white;
+    margin-left: 20px;
+}
+
+.heading-name h1 {
+    display: inline;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .heading-name h1 {
+        font-size: 20px;
+    }
+    
+    .heading-logo img {
+        height: 40px;
+    }
+}
